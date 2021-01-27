@@ -1,0 +1,29 @@
+// ======================================
+//  Images
+// ======================================
+
+ .img {  
+  &-avatar {
+    margin-top: $gap;
+    @include max-size($height: 100%);
+    @include centering;
+  }
+
+  &-frame {
+    @include max-size();
+    @include centering;
+    margin-top: $gap;    
+    padding: 13px;
+    border: 1px solid $color-border;
+  }
+  &-logo {
+    @include centering;
+    @include media-query('med') {
+      margin-left: initial;
+      margin-right: initial;
+    }    
+  }
+}
+
+
+

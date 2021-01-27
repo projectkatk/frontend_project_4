@@ -1,0 +1,29 @@
+// ======================================
+//  Button Styling
+// ======================================
+
+%btn {
+  margin-top: 15px;
+  width: 100%;
+  color: $white;
+  border: none;
+  padding: 10px 0;
+  text-transform: uppercase;
+  border-radius: $b-radius;
+
+  
+  @include media-query('med') {
+    padding: $gap 30px;    
+    & + & {
+        margin-left: $gap;
+    }
+  }
+}
+
+.btn {
+  @extend %btn;    
+}
+
+@include btn-theme($btn-theme); // including button hover styling
+@include col-bg($col-bg);
+

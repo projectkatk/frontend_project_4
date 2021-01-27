@@ -1,0 +1,28 @@
+/* ============================================= */
+/*              Form Styling                     */
+/* ============================================= */
+
+// ======================================
+//  Form Styling
+// ======================================
+.form {
+  @include flexing($basis:100%);
+}
+
+.input{
+  @include centering;
+  width: 94%;
+  margin-top: $gap;
+  border: none;
+  padding: $gap;
+  border-bottom: 5px solid $color-primary;
+}
+
+.hidden {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}

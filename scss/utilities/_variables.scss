@@ -1,0 +1,66 @@
+// ======================================
+//  Variables
+// ======================================
+
+// Colors
+$color-primary:  #58e1c1;
+$color-secondary:  #777;
+$color-link:  #51ddfc;
+$color-error: #e4757a;
+$color-info: #927bc1;
+$color-success: #63cc82;
+$color-warning: #fd7856;
+
+$white: #fff;
+$color-border: #ccc;
+
+// Fonts
+$font-stack-primary: 'Lato', sans-serif;
+$font-normal: 300;
+$font-bold: 700;
+
+// Layout
+$max-width: 1400px;
+$gap: 10px;
+
+// Breakpoints
+$breakpoints: (
+  's': 767px,
+  'med': 768px
+);
+
+// Border style
+$b-radius: 5px;
+
+// Theme colors & flex-basis cals for grid system
+$col-bg: (
+  'col-1': $color-info,
+  'col-2': $color-warning,
+  'col-3': #deb2ee,
+  'col-4': #7ee6fd,
+  'col-5': #88d9a0,
+  'col-6': #4da2bb,
+  'col-7': #ec9fa3,
+  'col-8': #fd9f85,
+  'col-9': $color-error,
+  'col-10': $color-success,
+  'col-11': $color-link,
+  'col-12': #80e8d1  
+);
+
+// Buttons theme
+$btn-theme: (
+  'default': $color-link,
+  'error': $color-error,
+  'info': $color-info,
+  'success': $color-success,
+  'warning': $color-warning
+);
+
+
+
+
+
+
+
+

@@ -1,0 +1,80 @@
+// ======================================
+//  Mixins
+// ======================================
+
+@mixin centering {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Create a flex container
+@mixin flexing (
+  $display: null,
+  $dir: null,
+  $wrap: null,
+  $justify: null,
+  $align:null,
+  $basis: null) {
+    display: $display;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: $align;
+    flex-basis:$basis;
+}
+
+// media query mixin 
+@mixin media-query($break) {
+  $value: map-get($breakpoints, $break);
+  $med: map-get($breakpoints, 'med');
+
+  @if $value < $med {
+    @media (max-width: $value) {
+      @content;
+    }
+  }
+  @else {
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+}
+
+// col-number class badkground-color
+@mixin col-bg($map) {
+  @each $col-num, $color in $map {
+    .#{theme}.#{$col-num} {
+      background-color: $color;
+    }
+  }
+}
+
+// col-number class width calculation
+@mixin col-flexy($map) {
+  @for $i from 1 through length($map) {
+    .col-#{$i} {
+      flex-basis: round($i / 12*10000)/10000 * 100%;
+    }
+  }
+}
+
+// button theme class bg color designation & hover styling
+@mixin btn-theme($map) {
+  @each $theme, $value in $map {
+    .#{$theme} {
+      background-color: $value;  
+      &:hover {
+        background-color: lighten($value, 15%);
+        transition: background-color 0.3s ease-in-out;
+      }
+    }
+  }
+}
+
+// max width function with varied height
+@mixin max-size($width:100%, $height:null) {
+  max-width: $width;
+  max-height: $height;
+}
+

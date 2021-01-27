@@ -1,0 +1,42 @@
+// ======================================
+//  Navigation
+// ======================================
+.nav {
+  padding-left: 0;
+  @include flexing(
+              $display:flex, 
+              $dir:column, 
+              $basis: 100%);
+              
+  @include media-query('med') {
+    @include flexing(
+                $dir: row, 
+                $justify: flex-end, 
+                $align: center);
+  }
+
+  &-link {
+    text-align: center;
+    border-radius: $b-radius;
+    padding: $gap 0;
+    display: block;
+    width: 100%;
+    transition: 
+      background-color .2s ease-in-out, 
+      color .2s ease-in-out;
+    
+    &:hover {
+      color: $white;
+      background-color: $color-primary;
+    }
+  
+    @include media-query('med') {
+      @include flexing($basis: 100px);
+    }
+  }
+}
+
+
+
+
+
